@@ -10,7 +10,7 @@ var showcmd = &cobra.Command{
 	Short: "List all todo tasks",
 	Long:  "List all todo tasks",
 	Run: func(cmd *cobra.Command, args []string) {
-		loadTasks() // load tasks from file
+		loadTasks()
 
 		if len(Todo_list) == 0 {
 			println("Well done!! You have completed all your tasks")

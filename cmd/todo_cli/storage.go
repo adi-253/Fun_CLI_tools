@@ -12,7 +12,7 @@ func loadTasks() error {
 	data, err := os.ReadFile(taskFile)
 	if err != nil {
 		if os.IsNotExist(err) {
-			Todo_list = []string{} // no file yet
+			Todo_list = []string{}
 			return nil
 		}
 		return err

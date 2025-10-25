@@ -6,7 +6,7 @@ import (
 
 var Todo_list []string
 
-// exported base command (was unexported `todocmd`)
+
 var TodoCmd = &cobra.Command{
 	Use:   "todo",
 	Short: "Base Command for todo",

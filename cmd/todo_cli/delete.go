@@ -19,7 +19,7 @@ var deletecmd = &cobra.Command{
 		// Load existing tasks
 		loadTasks()
 
-		target := strings.Join(args, " ") // handle spaces in task
+		target := strings.Join(args, " ")
 		if len(Todo_list)==0{
 			fmt.Println("Todo Task is empty")
 		}else{
@@ -42,6 +42,5 @@ var deletecmd = &cobra.Command{
 }
 
 func init(){
-	// attach this subcommand to the exported TodoCmd
 	TodoCmd.AddCommand(deletecmd)
 }
