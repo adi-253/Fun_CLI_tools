@@ -63,7 +63,7 @@ var postcmd = &cobra.Command{
 }
 
 func init() {
-    postcmd.Flags().StringVarP(&postData, "data", "d", "", "Data to send in POST request body")
+    postcmd.Flags().StringVarP(&postData, "data", "d", "", "Data to send in POST request body")  //data is long term flag --data and d is short term flag -d
     postcmd.Flags().StringVarP(&contentType, "content-type", "c", "application/json", "Content-Type header")
     Apicmd.AddCommand(postcmd)
 }
