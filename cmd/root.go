@@ -7,6 +7,7 @@ import (
 	"os"
 
 	todocli "github.com/adi-253/Fun_CLI_tools/cmd/todo_cli" // added in init of root cmd (AddCommand function)
+	apitester "github.com/adi-253/Fun_CLI_tools/cmd/api_tester"
 	"github.com/spf13/cobra"
 )
 
@@ -45,9 +46,6 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	// attach the todo subcommand tree to the root command
-	AddCommand(todocli.TodoCmd)
-}
-
-func AddCommand(cmd *cobra.Command){
-	rootCmd.AddCommand(cmd)
+	rootCmd.AddCommand(todocli.TodoCmd)
+	rootCmd.AddCommand(apitester.Apicmd)
 }
